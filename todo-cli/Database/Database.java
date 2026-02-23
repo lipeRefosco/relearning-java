@@ -1,4 +1,4 @@
-abstract class Database<T> {
+abstract class Database {
     protected static String url;
     protected static Database instance;
 

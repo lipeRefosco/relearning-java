@@ -1,5 +1,3 @@
-import java.io.File;
-
 public class FileSystemDatabase extends Database {
     
     String url = "database.txt";
