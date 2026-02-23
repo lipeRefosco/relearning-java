@@ -9,7 +9,7 @@
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "args": ["add"]
+            "args": ["add", "Buy milk"]
         }
     ]
 }

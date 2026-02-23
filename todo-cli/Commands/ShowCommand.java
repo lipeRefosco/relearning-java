@@ -6,6 +6,11 @@ public class ShowCommand extends Command{
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public void execute() {
         // TODO Auto-generated method stub
         

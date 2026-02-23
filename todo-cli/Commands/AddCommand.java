@@ -1,7 +1,6 @@
 public class AddCommand extends Command {
     private String task;
 
-
     public AddCommand(String[] args, Database database) {
         this.name = args[0]; //Command name
         this.task = args[1]; //Task
@@ -9,7 +8,12 @@ public class AddCommand extends Command {
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public void execute() {
-        database.Save(this);
+        database.Save(task);
     }
 }

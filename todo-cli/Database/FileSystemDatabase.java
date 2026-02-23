@@ -2,11 +2,14 @@ import java.io.File;
 
 public class FileSystemDatabase extends Database {
     
+    String url = "database.txt";
+
     @Override
-    public void Save(Command command) {
-        File file = new File("database.txt");
+    public void Save(String task) {
         try {
-            java.nio.file.Files.write(file.toPath(), command.toString().getBytes());
+            java.io.FileWriter fw = new java.io.FileWriter(url, true); // Append mode
+            fw.write(task + System.lineSeparator());
+            fw.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

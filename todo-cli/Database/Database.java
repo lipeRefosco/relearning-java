@@ -1,6 +1,8 @@
-abstract class Database {
+abstract class Database<T> {
+    protected static String url;
     protected static Database instance;
 
-    abstract public void Save(Command command);
+    abstract public void Save(String data);
     abstract public Database getInstance();
+    
 }

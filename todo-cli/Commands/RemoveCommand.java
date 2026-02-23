@@ -5,7 +5,11 @@ public class RemoveCommand extends Command{
         this.name = args[0]; //Command name
         this.id = Integer.parseInt(args[1]); //ID of the task to be removed
         this.database = database;
-        
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 
     @Override
