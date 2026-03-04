@@ -1,5 +1,6 @@
 public class AddCommand extends Command {
     private String task;
+    private Database database;
 
     public AddCommand(String[] args, Database database) {
         this.name = args[0]; //Command name
