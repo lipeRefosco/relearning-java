@@ -21,5 +21,24 @@ public class FileSystemDatabase extends Database {
 
         return instance;
     }
-    
+
+    @Override
+    public String[] getAllData() {
+        try {
+            java.io.File file = new java.io.File(url);
+            if (!file.exists()) {
+                return new String[0]; // Return empty array if file doesn't exist
+            }
+            java.util.List<String> lines = new java.util.ArrayList<>();
+            java.util.Scanner scanner = new java.util.Scanner(file);
+            while (scanner.hasNextLine()) {
+                lines.add(scanner.nextLine());
+            }
+            scanner.close();
+            return lines.toArray(new String[0]);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new String[0]; // Return empty array on error
+        }
+    }
 }

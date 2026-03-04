@@ -4,5 +4,6 @@ abstract class Database {
 
     abstract public void Save(String data);
     abstract public Database getInstance();
+    abstract public String[] getAllData();
     
 }

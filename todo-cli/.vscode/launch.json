@@ -10,8 +10,7 @@
             "request": "launch",
             "mainClass": "${file}",
             "args": [
-                "add",
-                "Buy milk"
+                "show"
             ]
         }
     ]
